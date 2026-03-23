@@ -25,4 +25,10 @@ Q31_t IQmath_q31_div(Q31_t a, Q31_t b);
 Q31_t IQmath_q31_add(Q31_t a, Q31_t b);
 Q31_t IQmath_q31_sub(Q31_t a, Q31_t b);
 
+// 快速正余弦求解
+#define fast_cos_q31(x) fast_sin_q31(1.5707963f - x);
+Q31_t fast_sin_q31(float x);
+void fast_sin_cos_q31(float x, Q31_t *sin_x, Q31_t *cos_x);
+
+
 #endif // SGUAN_IQMATH_H
